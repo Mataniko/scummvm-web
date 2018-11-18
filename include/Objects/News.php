@@ -1,5 +1,7 @@
 <?php
 require_once('Objects/BasicObject.php');
+require_once('vendor/erusev/parsedown/Parsedown.php');
+
 /**
  * The news class represents a news item on the website.
  */
@@ -9,7 +11,8 @@ class News extends BasicObject {
 	private $_author;
 	private $_image;
 	private $_content;
-	private $_filename;
+  private $_filename;
+  private static $_parsedown;
 
 	/**
 	 * News object constructor that extracts the data from the JSON scheme
@@ -25,10 +28,13 @@ class News extends BasicObject {
 	 *
 	 */
 	public function __construct($data, $filename, $processContent = false) {
+    if (!$_parsedown) {
+      $_parsedown = new Parsedown();
+    }
 		$this->_title = $processContent ? $this->processText($data->title) : $data->title;
 		$this->_date = $data->date;
 		$this->_author = $data->author;
-		$this->_content = $processContent ? $this->processText($data->content) : $data->content;
+		$this->_content = $processContent ? $this->processText($_parsedown->text($data->content)) : $_parsedown->text($data->content);
 		$this->_filename = basename($filename);
 	}
 

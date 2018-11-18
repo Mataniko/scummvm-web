@@ -11,7 +11,8 @@
     "require": {
         "leafo/scssphp": "^0.7.6",
         "smarty/smarty": "^3.1",
-        "ezyang/htmlpurifier": "^4.10"
+        "ezyang/htmlpurifier": "^4.10",
+        "erusev/parsedown": "^1.7"
     },
     "scripts": {
       "post-install-cmd": [
