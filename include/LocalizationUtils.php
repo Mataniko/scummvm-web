@@ -4,9 +4,8 @@ namespace ScummVM;
 require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/../include/Constants.php';
 
-use ScummVM\Objects\News;
-use ScummVM\Models\NewsModel;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
+use Symfony\Component\Yaml\Yaml;
 use Erusev\Parsedown;
 
 class LocalizationUtils
@@ -31,13 +30,11 @@ class LocalizationUtils
     {
         $Parsedown = new \Parsedown();
         $Parsedown->setBreaksEnabled(true);
-        $filename = JOIN(DIRECTORY_SEPARATOR, [DIR_DATA, $lang, "strings.json"]);
-        echo("Converting {$filename} from JSON to INI\n");
-        $jsonString = file_get_contents($filename);
-        $json = json_decode($jsonString);
-
+        $filename = JOIN(DIRECTORY_SEPARATOR, [DIR_DATA, $lang, "strings.yaml"]);
+        echo("Converting {$filename} from YAML to INI\n");
+        $yaml = Yaml::parseFile($filename);
         $output = "";
-        foreach ($json as $key => $value) {
+        foreach ($yaml as $key => $value) {
             if ($value) {
                 $output .= $key . ' = """' . $this->purifier->purify($Parsedown->line($value)) . '"""' . "\n";
             }
