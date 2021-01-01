@@ -5,7 +5,7 @@ namespace ScummVM\Objects;
  * The Person class represents a person entry on the credits page on the
  * website.
  */
-class Person extends BasicObject
+class Person extends BaseObject
 {
     private $alias;
 

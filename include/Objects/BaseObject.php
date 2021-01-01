@@ -2,10 +2,10 @@
 namespace ScummVM\Objects;
 
 /**
- * The BasicObject class is inherited by all other objects and houses all common
+ * The BaseObject class is inherited by all other objects and houses all common
  * functions.
  */
-abstract class BasicObject
+abstract class BaseObject
 {
     protected $name;
     protected $description;

@@ -7,7 +7,7 @@ use ScummVM\OrmObjects\Base\CompatibilityQuery;
 /**
  * The CompatibilityModel class will generate CompatGame objects.
  */
-class CompatibilityModel extends BasicModel
+class CompatibilityModel extends BaseModel
 {
     const NO_VERSION = 'No version specified.';
     const NO_VERSION_TARGET = 'No version and/or target specified.';

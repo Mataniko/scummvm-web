@@ -8,7 +8,7 @@ use Symfony\Component\Yaml\Yaml;
  * The LinksModel class will generate WebLink objects.
  * LinkGroup-objects representing a group of external links on the website.
  */
-class LinksModel extends BasicModel
+class LinksModel extends BaseModel
 {
     /* Get all the groups and the respectively demos. */
     public function getAllGroupsAndLinks()

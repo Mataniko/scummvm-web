@@ -7,7 +7,7 @@ use Propel\Runtime\Collection\ObjectCollection;
 /**
  * The ScreenshotsModel will generate Screenshot objects.
  */
-class ScreenshotsModel extends BasicModel
+class ScreenshotsModel extends BaseModel
 {
     const INVALID_TARGET = 'Invalid target specified.';
     const INVALID_CATEGORY = 'Invalid category specified.';

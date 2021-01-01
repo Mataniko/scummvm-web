@@ -5,7 +5,7 @@ namespace ScummVM\Objects;
  * The article class represents a link on the website to an article covering
  * ScummVM in some way.
  */
-class Article extends BasicObject
+class Article extends BaseObject
 {
     private $url;
     private $language;

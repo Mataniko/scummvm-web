@@ -2,10 +2,10 @@
 namespace ScummVM\Objects;
 
 /**
- * The BasicSection class is inherited by all other Sections and houses all common
+ * The BaseSection class is inherited by all other Sections and houses all common
  * functions.
  */
-abstract class BasicSection extends BasicObject
+abstract class BaseSection extends BaseObject
 {
     protected $title;
     protected $anchor;

@@ -7,7 +7,7 @@ use ScummVM\OrmObjects\GameDownloadQuery;
 /**
  * The GameDownloadsModel will produce DownloadsSection objects.
  */
-class GameDownloadsModel extends BasicModel
+class GameDownloadsModel extends BaseModel
 {
     /* Get all download entries. */
     public function getAllDownloads()

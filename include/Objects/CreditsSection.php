@@ -2,10 +2,10 @@
 namespace ScummVM\Objects;
 
 /**
- * The BasicSection class represents a section (or a subsection) on the credits page
+ * The BaseSection class represents a section (or a subsection) on the credits page
  * on the website.
  */
-class CreditsSection extends BasicSection
+class CreditsSection extends BaseSection
 {
     private $groups;
     private $paragraphs;

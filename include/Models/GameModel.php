@@ -6,7 +6,7 @@ use ScummVM\OrmObjects\GameQuery;
 /**
  * The GamesModel is used to cross reference Games across the website
  */
-class GameModel extends BasicModel
+class GameModel extends BaseModel
 {
     /* Get all Games from YAML */
     public function getAllGames()

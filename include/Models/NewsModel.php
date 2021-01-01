@@ -6,7 +6,7 @@ use ScummVM\Objects\News;
 /**
  * The NewsModel class will generate News objects
  */
-class NewsModel extends BasicModel
+class NewsModel extends BaseModel
 {
     const NO_FILES = 'No news files found.';
     const INVALID_DATE = 'Invalid date, use yyyyMMdd. or yyyyMMddHHmm';

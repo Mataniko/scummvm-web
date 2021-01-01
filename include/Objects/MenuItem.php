@@ -4,7 +4,7 @@ namespace ScummVM\Objects;
 /**
  * The menu class represents a sidebar menu group on the website.
  */
-class MenuItem extends BasicObject
+class MenuItem extends BaseObject
 {
 
     private $class;

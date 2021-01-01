@@ -6,7 +6,7 @@ use Phpfastcache\Drivers\Predis\Config as PredisConfig;
 use Phpfastcache\Drivers\Redis\Config as RedisConfig;
 use Phpfastcache\Exceptions\PhpfastcacheDriverException;
 
-abstract class BasicModel
+abstract class BaseModel
 {
     const FILE_NOT_FOUND = 'The filename %s could not be found';
 

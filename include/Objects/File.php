@@ -4,7 +4,7 @@ namespace ScummVM\Objects;
 /**
  * The File object represents a file on the website.
  */
-class File extends BasicObject
+class File extends BaseObject
 {
     private $category_icon;
     private $url;

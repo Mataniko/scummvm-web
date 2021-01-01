@@ -7,7 +7,7 @@ use Symfony\Component\Yaml\Yaml;
  * The SimpleModel is used automatically create simple models
  * that do not require any special handling
  */
-class SimpleYamlModel extends BasicModel
+class SimpleYamlModel extends BaseModel
 {
     private $filename;
     private $type;

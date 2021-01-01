@@ -7,7 +7,7 @@ use Symfony\Component\Yaml\Yaml;
  * The SimpleModel is used automatically create simple models
  * that do not require any special handling
  */
-class SimpleModel extends BasicModel
+class SimpleModel extends BaseModel
 {
     private $query;
 

@@ -6,7 +6,7 @@ use Propel\Runtime\Map\TableMap;
 /**
  * The DownloadsSection object represents a section on the downloads page.
  */
-class DownloadsSection extends BasicSection
+class DownloadsSection extends BaseSection
 {
     private $notes;
     private $items;

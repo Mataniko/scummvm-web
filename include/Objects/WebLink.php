@@ -4,7 +4,7 @@ namespace ScummVM\Objects;
 /**
  * The WebLink class represents a link item on the website.
  */
-class WebLink extends BasicObject
+class WebLink extends BaseObject
 {
     private $url;
 

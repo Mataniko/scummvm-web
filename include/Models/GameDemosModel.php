@@ -6,7 +6,7 @@ use ScummVM\OrmObjects\DemoQuery;
 /**
  * The GameDemosModel class will generate GameDemo objects.
  */
-class GameDemosModel extends BasicModel
+class GameDemosModel extends BaseModel
 {
     /* Get all the groups and their respective demos. */
     public function getAllGroupsAndDemos()

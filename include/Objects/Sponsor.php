@@ -5,7 +5,7 @@ namespace ScummVM\Objects;
  * The article class represents a link on the website to an article covering
  * ScummVM in some way.
  */
-class Sponsor extends BasicObject
+class Sponsor extends BaseObject
 {
     private $link;
     private $image;

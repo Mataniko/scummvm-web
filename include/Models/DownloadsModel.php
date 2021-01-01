@@ -9,7 +9,7 @@ use ScummVM\OrmObjects\DownloadQuery;
 /**
  * The DownloadsModel will produce DownloadsSection objects.
  */
-class DownloadsModel extends BasicModel
+class DownloadsModel extends BaseModel
 {
     /* Get all download entries. */
     public function getAllDownloads()

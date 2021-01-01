@@ -7,7 +7,7 @@ use ScummVM\OrmObjects\VersionQuery;
 /**
  * The VersionsModel is used to cross reference versions across the website
  */
-class VersionsModel extends BasicModel
+class VersionsModel extends BaseModel
 {
     /* Get all versions from YAML */
     public function getAllVersions()
