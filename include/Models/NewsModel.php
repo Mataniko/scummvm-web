@@ -83,7 +83,7 @@ class NewsModel extends BaseModel
         if (is_null($filename) || !preg_match('/^\d{8,12}[a-z]?$/', $filename)) {
             throw new \ErrorException(self::INVALID_DATE);
         }
-        $fname = $this->getLocalizedFile("news/$filename.markdown");
+        $fname = $this->getLocalizedFilename("news/$filename.markdown");
         $data = @file_get_contents($fname);
 
         return new News($data, $fname, $processContent);

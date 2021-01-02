@@ -15,7 +15,7 @@ class LinksModel extends BaseModel
     {
         $entries = $this->getFromCache();
         if (is_null($entries)) {
-            $fname = $this->getLocalizedFile('links.yaml');
+            $fname = $this->getLocalizedFilename('links.yaml');
             $parsedData = Yaml::parseFile($fname);
             $entries = [];
             foreach ($parsedData as $value) {

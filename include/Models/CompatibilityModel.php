@@ -15,7 +15,7 @@ class CompatibilityModel extends BaseModel
 
     public function getLastUpdated()
     {
-        return filemtime($this->getLocalizedFile("compatibility.yaml"));
+        return filemtime($this->getLocalizedFilename("compatibility.yaml"));
     }
 
     /* Get all the groups and the respectively demos for the specified ScummVM version. */

@@ -18,7 +18,7 @@ class SimpleYamlModel extends BaseModel
     public function __construct($type, $filename)
     {
         parent::__construct();
-        $this->filename = $this->getLocalizedFile($filename);
+        $this->filename = $this->getLocalizedFilename($filename);
         $this->type = "ScummVM\Objects\\$type";
     }
 
