@@ -1,6 +1,8 @@
 <?php
 namespace ScummVM\Models;
 
+use Propel\Runtime\Collection\ObjectCollection;
+use ScummVM\OrmObjects\Demo;
 use ScummVM\OrmObjects\DemoQuery;
 
 /**
@@ -8,7 +10,11 @@ use ScummVM\OrmObjects\DemoQuery;
  */
 class GameDemosModel extends BaseModel
 {
-    /* Get all the groups and their respective demos. */
+    /**
+     * Get all the groups and their respective demos.
+     *
+     * @return mixed Demos grouped by company.
+     */
     public function getAllGroupsAndDemos()
     {
         $groupedData = $this->getFromCache();
@@ -24,6 +30,13 @@ class GameDemosModel extends BaseModel
         return $groupedData;
     }
 
+    /**
+     * Groups Demo entries by Company. If a Company has less than 15 demos,
+     * the demos will be grouped under "Miscellaneous Demos".
+     *
+     * @param  Demo[] $demos
+     * @return mixed Demos grouped by Company.
+     */
     private function createGroups($demos)
     {
         $groups = [];

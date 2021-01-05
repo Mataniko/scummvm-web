@@ -1,5 +1,4 @@
 <?php
-
 namespace ScummVM\Models;
 
 use ScummVM\Objects\DownloadsSection;
@@ -11,7 +10,11 @@ use ScummVM\OrmObjects\DownloadQuery;
  */
 class DownloadsModel extends BaseModel
 {
-    /* Get all download entries. */
+    /**
+     * Get all download entries categorized into sections.
+     *
+     * @return DownloadsSection[] Download sections
+     */
     public function getAllDownloads()
     {
         $sections = $this->getFromCache();
@@ -49,6 +52,12 @@ class DownloadsModel extends BaseModel
         return $sections;
     }
 
+    /**
+     * Data structure containing section data in the form of:
+     * "sectionId" => [ "title" => "", "notes" => ""].
+     *
+     * @return array Mapping between section names and their title and notes.
+     */
     private function getSectionData()
     {
         return [
@@ -70,7 +79,11 @@ class DownloadsModel extends BaseModel
           ];
     }
 
-    /* Get the recommended download */
+    /**
+     * Get the recommended download based on the browser User Agent.
+     *
+     * @return mixed|boolean The recommended download, or false if no UA match.
+     */
     public function getRecommendedDownload()
     {
         if (!isset($_SERVER['HTTP_USER_AGENT'])) {
@@ -90,6 +103,7 @@ class DownloadsModel extends BaseModel
             sscanf($url, "/frs/scummvm/%s", $versionStr);
             $version = substr($versionStr, 0, strpos($versionStr, "/"));
             $name = strip_tags($download->getName());
+            // TODO: Fix or remove downloads extra data
             $data = ""; //$download->getExtraInfo();
             if (is_array($data)) {
                 $extra_text = $data['size'] . " ";
